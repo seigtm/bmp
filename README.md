@@ -11,11 +11,6 @@ This repository contains two programs: `bmp_converter` and `bmp_file_tester`.
 2. **Ensure** you have an input 24-bit BMP image in the `assets` directory named `input.bmp`.
 3. **Run** the compiled program.
 
-## Requirements
-
-- C++ compiler.
-- Windows operating system (due to the use of **Windows.h**).
-
 ## Additional Information
 
 - **Course**: Peter the Great St. Petersburg Polytechnic University (SPbPU), Computer Architecture.

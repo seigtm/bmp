@@ -442,3 +442,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Output BMP image
+assets/output*
