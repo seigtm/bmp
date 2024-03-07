@@ -8,13 +8,14 @@
 
 #include <algorithm>
 #include <array>
-#include <iostream>
+#include <cmath>
+#include <cstddef>
+#include <cstdint>
 #include <filesystem>
 #include <fstream>
+#include <iostream>
 #include <ranges>
 #include <utility>
-#include <string>
-#include <vector>
 
 #include "Windows.h"
 
