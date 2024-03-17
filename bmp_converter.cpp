@@ -87,7 +87,7 @@ constexpr double color_distance(const rgb_triple &color1, const rgb_quad &color2
                      std::pow((color2.red - color1.red), 2));
 }
 
-template<size_t N>
+template<std::size_t N>
 constexpr std::byte find_closest_color(const rgb_triple &color, const std::array<rgb_quad, N> &palette) noexcept {
     const auto distance_to_color{ [&color](const auto &lhs, const auto &rhs) {
         return color_distance(color, lhs) < color_distance(color, rhs);
@@ -167,8 +167,8 @@ void convert_bmp_24_to_4_depth(const fs::path &input_file_path,
     output_file.write(reinterpret_cast<char *>(&bmp_info_header), sizeof(bitmap_info_header));
     output_file.write(reinterpret_cast<const char *>(palette.data()), sizeof(palette));
 
-    for(size_t row{}; row < bmp_info_header.bi_height; ++row) {
-        for(size_t column{}; column < bmp_info_header.bi_width; column += 2) {
+    for(std::size_t row{}; row < bmp_info_header.bi_height; ++row) {
+        for(std::size_t column{}; column < bmp_info_header.bi_width; column += 2) {
             std::pair<rgb_triple, rgb_triple> pixels;
             input_file.read(reinterpret_cast<char *>(&pixels), sizeof(pixels));
             const std::byte two_pixels{
